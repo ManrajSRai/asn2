@@ -1,11 +1,11 @@
 // create an express app
 const express = require("express");
-//const {urlencoded} = require("express");
+const {urlencoded} = require("express");
 const app = express();
 const path = require("path");
-//const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4000
 const { Pool } = require('pg');
-//const {connectionString} = require("pg/lib/defaults");
+const {connectionString} = require("pg/lib/defaults");
 var pool;
 pool = new Pool ({
   connectionString: process.env.DATABASE_URL, ssl: {rejectUnauthorized: false}
