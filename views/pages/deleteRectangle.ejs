@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    background-color: rgb(255, 191, 191);
+}
+h1 {
+    text-align: center;
+    font-family: monospace, sans-serif;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #051428;
+}
+.center {
+    text-align: center;
+}
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #ffffff;
+    border: radius 25px;
+    border: 2px solid red;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: large;
+    position: relative;
+    display: inline-block;
+    border-style: groove;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+}
+
+.button:hover {
+    transform: scale(0.90);
+}
+.button:active {
+    transform: scale(0.90);
+    color: Coral;
+}
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none red;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+    </style>
+    <title>Delete Rectangles</title>
+</head>
+
+<body>
+
+
+<div style="text-align: center;">
+    <h1>Database Results</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Width/th>
+            <th>Height</th>
+            <th>Colour</th>
+        </tr>
+        <% rows.forEach(function(r) { %>
+            <tr>
+                <th><%= r.name %></th>
+                <th><%= r.width %></th>
+                <th> <%=r.height%></th>
+                <th> <%=r.color%></th>
+
+            </tr>
+        <% }); %>
+    </table>
+</div>
+<br>
+<br>
+<div style="text-align: center;">
+    <form class="form" id="Delete_REC" action="/deleterec" method="post">
+        <label for="Name"></label>
+        <label for="name"></label><input type = "text" id = "name_rec" name = "RName" value = "" placeholder="Name the rectangle you want to delete">
+        <input type="submit" id ='SUB' name="SUBm" value="Delete">
+    </form>
+</div>
+
+</body>
+</html>

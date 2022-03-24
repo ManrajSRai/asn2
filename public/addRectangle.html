@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ADD</title>
+  <link rel="stylesheet" type="css" href="rectangle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  
+  <style>
+body {
+    background-color: rgb(255, 191, 191);
+}
+h1 {
+    text-align: center;
+    font-family: monospace, sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #051428;
+}
+.left {
+    text-align: left;
+    float:left ; 
+    margin-left: 500px;
+}
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #ffffff;
+    border: radius 25px;
+    border: 2px solid red;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: medium;
+    position: relative;
+    display: inline-block;
+    border-style: groove;
+    padding: 20px;
+    width: 175px;
+    height: 75px;
+}
+
+.button:hover {
+    transform: scale(0.90);
+}
+.button:active {
+    transform: scale(0.90);
+    color: Coral;
+}
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none red;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+  </style>
+
+</head>
+
+<body>
+
+<h1>Add Rectangles</h1>
+<br>
+<br>
+<br>
+
+<div class="left">
+    <button onclick="window.location.href='rectangle.html'" class="button">Rectangles Home</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="window.location.href='deleteRectangle.html'" class ="button">Delete Rectangles</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="window.location.href='displayRectangle.html'" class ="button">Display Rectangles</button>
+</div>
+
+<div style= "margin-left: 100px; float: left; text-align: left;">
+    <form style="float:left;" method="post" action="ADD_REC" >
+
+      <label for="nameRec">Name</label>
+      <input type="text" id="nameRec" name="RectangleName" placeholder="Rectangle Name...">
+      <br>
+      <label for="widthRec">Width</label>
+      <input type="text" id="widthRec" name="RectangleWidth" placeholder="Rectangle Width..">
+      <br>
+      <label for="heightRec">Height</label>
+      <input type="text" id="heightRec" name="RectangleHeight" placeholder="Rectangle Height..">
+      <br>      
+
+
+      <br>
+      <input id ="submitRec" type="submit" value="Submit">
+
+    </form>
+  </div>
+  <script src = "rectangle.js"></script>
+
+
+</body>
+
+</html>

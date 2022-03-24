@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ASSIGNMENT2</title>
+  
+  <link rel="stylesheet" type="css" href="rectangle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+
+  <style>
+body {
+    background-color: rgb(255, 191, 191);
+}
+h1 {
+    text-align: center;
+    font-family: monospace, sans-serif;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #051428;
+}
+.center {
+    text-align: center;
+}
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #ffffff;
+    border: radius 25px;
+    border: 2px solid red;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: large;
+    position: relative;
+    display: inline-block;
+    border-style: groove;
+    padding: 20px;
+    width: 175px;
+    height: 75px;
+}
+
+.button:hover {
+    transform: scale(0.90);
+}
+.button:active {
+    transform: scale(0.90);
+    color: coral;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none red;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+  </style>
+
+</head>
+
+<body>
+
+<h1>Delete Rectangles by Width</h1>
+<br>
+<br>
+<br>
+<br>
+<div class ="center">
+
+    <button onclick="window.location.href='rectangle.html'" class="button">Rectangles Home</button>
+    <button onclick="window.location.href='addRectangle.html'" class="button">Add Rectangles</button>
+    <button onclick="window.location.href='views/pages/displayRectangle.ejs'" class ="button">Display Rectangles</button>
+    <br>
+    <br>
+    <br>
+    <form action ="/delete_WIDTH" method="post" style="text-align: center;">
+
+        <label for="delWidthRec"  >Width</label>
+        <input type="text" id="delWidthRec" name="RectangleWidth" placeholder="Rectangle width..">
+        <br>
+
+        <input id ="submitRec" type="submit" value="Submit">
+  
+    </form>
+
+
+
+</div>
+
+
+</body>
+
+</html>
