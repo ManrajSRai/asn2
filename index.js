@@ -62,6 +62,17 @@ app.get("/views/pages/displayRectangle.ejs", function (req, res) {
     res.render('pages/displayRectangle',results);
   })
 });
+
+app.get('/database', (req, res) => {
+  var getUsersQuery = 'SELECT * from rectangles';
+  pool.query(getUsersQuery, (error, result)=>{
+    if(error) {
+      res.end(error);
+    }
+    var results = {'rows' : result.rows};
+    res.render('pages/displayRectangle', results);
+  })
+})
 //deleting rectangles post methods
 app.post('/delete_HEIGHT', async(req,res) => {
   const h = req.body.RectangleHeight;
