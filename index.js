@@ -73,6 +73,7 @@ app.get('/database', (req, res) => {
     res.render('pages/displayRectangle', results);
   })
 })
+
 //deleting rectangles post methods
 app.post('/delete_HEIGHT', async(req,res) => {
   const h = req.body.RectangleHeight;
